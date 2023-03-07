@@ -5,8 +5,11 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome To Snake And Ladder");
+
         Play game = new Play();
-        game.PlaySnakeAndLadder();
-        
+        PlayerRollsTheDie playerRollsTheDie = new PlayerRollsTheDie();
+
+        int roll = playerRollsTheDie.RollDie();
+        game.PlaySnakeAndLadder(roll);
     }
 }
